@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Momo 魔法料理圖鑑：搜尋食材、篩選料理，收藏今天的靈感。">
+<title>Momo's Recipe Book｜魔法料理圖鑑</title>
+<link rel="stylesheet" href="styles.css">
+<script src="data/recipes.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="./" aria-label="Momo 魔法料理圖鑑首頁"><span>✦</span> Momo's Recipe Book</a><span class="topnote">每天一點料理魔法 ✨</span></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">✦ WELCOME TO MOMO'S KITCHEN</p><h1>今天冰箱裡，<br><em>藏著什麼魔法？</em></h1><p class="intro">不必是大廚，也能好好吃一餐。輸入食材或料理名稱，讓 Momo 幫你找到下一道靈感。</p><a href="#recipes" class="hero-link">開始探索食譜 <span aria-hidden="true">↗</span></a></div><div class="hero-art" aria-hidden="true"><span class="spark spark1">✦</span><span class="spark spark2">✳</span><div class="plate">🍳</div><span class="hero-tag">MOMO'S<br>MAGIC KITCHEN</span></div></section>
+<section id="recipes" class="recipes-section" aria-labelledby="recipes-heading"><div class="section-head"><div><p class="eyebrow">THE RECIPE COLLECTION</p><h2 id="recipes-heading">魔法食譜圖鑑 <span>✳</span></h2></div><p class="section-desc">從簡單的一餐開始，慢慢累積你的料理靈感。</p></div>
+<div class="toolbar"><label class="search-wrap"><span aria-hidden="true">⌕</span><span class="sr-only">搜尋料理或食材</span><input id="search" type="search" placeholder="搜尋料理名稱或食材，例如：番茄、雞蛋…" autocomplete="off"></label><label class="filter-wrap">類別 <select id="category"><option value="">全部類別</option><option>主食</option><option>配菜</option><option>湯品</option><option>點心</option></select></label><label class="filter-wrap">難度 <select id="difficulty"><option value="">全部難度</option><option>新手</option><option>簡單</option><option>進階</option></select></label></div>
+<div class="resultbar"><span id="count" aria-live="polite"></span><button id="reset" class="text-button" type="button">清除篩選 ↺</button></div><div id="grid" class="recipe-grid"></div><p id="empty" class="empty" hidden>找不到符合條件的食譜 🥕<br>試試其他食材或清除篩選吧！</p>
+</section>
+<section class="about"><span class="about-icon">🪄</span><div><h2>一本會持續長大的魔法食譜書</h2><p>每一道料理都依照同一套資料格式建立。未來只要依照 <code>AGENTS.md</code> 新增食譜資料，網站就會自動產生新卡片，不需要重做整個頁面。</p></div></section>
+</main>
+<footer>Made with ♡ by Momo · AI-assisted learning project · <span>2026</span></footer>
+<dialog id="detail" aria-labelledby="detail-title"><div class="dialog-content"><button class="close" id="close" type="button" aria-label="關閉食譜">✕</button><div id="detail-body"></div></div></dialog>
+</body></html>
